@@ -1,0 +1,43 @@
+procedure Register
+	begin
+		character cUserName, cPassword
+		numeric nPIN
+		display "You can Register by Inputting Your Data Down Below"
+		display "Input Your Username : "
+		accept cUserName
+		display "Input Your Password : "
+		accept cPassword
+		display "Input Your PIN : "
+		accept nPIN
+		read source from database
+			if (cCharacter = "" OR cPassword = "" OR nPIN = "")
+			//Username, Password or PIN needs to be filled
+				begin
+					display "Username, Password and PIN must be filled"
+					call Register
+				end
+			else if (cCharacter = character	<= 3 OR cPassword = character <= 3)
+			//Username and Password need to have 4 or more character
+				begin
+					display "Username and Password must be 4 characters length or more"
+					call Register
+				end
+			else if (nPIN != numeric == 6)
+			//Pin needs to have 6 number
+				begin
+					display "PIN must have 6 number"
+					call Register
+				end
+			else if (cCharacter = True)
+			// If the username was used in database
+				begin
+					display  "Username is already taken"
+					call Register
+			else
+			//If all of the inputs are correct
+				begin
+					display "Congratulations, Your Account Has Been Made"
+					call Homepage
+				end
+			end if
+	end

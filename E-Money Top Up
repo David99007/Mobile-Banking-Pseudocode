@@ -1,0 +1,40 @@
+procedure Emoney_Top_Up
+	begin
+		//E-money Menu
+		read source from database
+		//Declare variable
+		numeric nAccountNum, nChoose, nBalanceInput
+		//Read balance from database
+		numeric nBalance = True
+		display "You Have Choosen E-Money Top Up Menu"
+		display "Input Your Account Number"
+		accept nAccountNum
+		Label1:
+		display "Input Your Balance : Rp."
+		accept nBalanceInput
+			if (nBalanceInput < 50000 OR nBalanceInput < 0 OR nBalance = False)
+				begin
+					display "- You can Only Top Up with Minimal Balance of Rp.50000"
+					display "- You can't Input Negative Balance"
+					display "- You can Only Input Balance Less than Your Total Balance"
+					Label1
+				end
+			else
+				begin
+					display "Your Transaction is Success"
+				end
+			end if
+		display "Do You Want to Continue?
+				 1. Yes
+				 2. No"
+		display "Insert by Inputing Number : "
+		accept nChoose
+		switch (nChoose)
+		case "1" :
+				call Top_Up_Menu
+				break
+		case "2" :
+				display "You Will be Logged Out"
+				call Homepage
+				break
+	end

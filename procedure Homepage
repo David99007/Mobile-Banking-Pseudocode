@@ -1,0 +1,27 @@
+procedure Homepage
+	begin
+	//Declaration of variable
+		numeric nChoose
+		//Menu Homepage
+		display "=================================
+				 ==========Top Up System==========
+				 ================================="
+		display "Welcome to Mobile Top Up System"
+		display "Have you had an account?
+				 1. Yes
+				 2. No"
+		display "Insert by Typing the Number"
+		accept nChoose
+		//End of Menu Homepage
+		switch (nChoose)
+			case "1" : //If the number 1 is choosen
+						call Login
+						break
+			case "2" : //If the number 2 is choosen
+						call Register
+						break
+			default : //If the input is not number 1 or number 2
+					display "The Input is Wrong, Please Try Again"
+					call Homepage
+					break
+	end

@@ -1,0 +1,32 @@
+procedure Top_Up_Menu
+	begin
+		//Menu of Top Up Section
+		numeric nChoose
+		display "You Have Choosen Top Up Menu"
+		display "What Kind of Top Up do You Want to Do : 
+				 1. E-Money Top Up
+				 2. Mobile Phone Top Up
+				 3. Transfer
+				 4. Back
+				 Insert by Typing the Number : "
+		accept nChoose
+		//End of Top Up Section
+		switch (nChoose)
+			case "1" : //If the number 1 is choosen
+					call Emoney_Top_Up
+					break
+			case "2" : //If the number 2 is choosen
+					call Mobile_Top_Up
+					break
+			case "3" : //If the number 3 is choosen
+					call Transfer
+					break
+			case "4" : //If the number 4 is choosen
+					display "You Will be Back to the Previous Section"
+					call Main_Menu
+					break
+			default : //If the input is not number 1, number 2, number 3 or number 4
+					display "Wrong Input, Please Try Again"
+					call Top_Up_Menu
+					break
+	end

@@ -1,0 +1,29 @@
+procedure Main_Menu
+	begin
+		//Main Menu
+		numeric nChoose
+		display "You Have Successfully Logged In"
+		display "Welcome to the Main Menu of Top Up System
+				 Choose Your Transaction
+				 1. Top Up
+				 2. Balance Check
+				 3. Log Out"
+		display "Insert by Typing the Number"
+		accept nChoose
+		//End of Main Menu
+		switch (nChoose)
+			case "1" : //If the number 1 is choosen
+					call Top_Up_Menu
+					break
+			case "2" : //If the number 2 is choosen
+					call Balance_Check_Menu
+					break
+			case "3" : //If the number 3 is choosen
+					display "You will be logged out"
+					call Homepage
+					break
+			default : //If the input is not number 1, number 2 or number 3
+					display "The Input is Wrong, Please Try Again"
+					call Main_Menu
+					break
+	end

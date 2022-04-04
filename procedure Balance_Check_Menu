@@ -1,0 +1,27 @@
+procedure Balance_Check_Menu
+	begin
+		read source from database
+		//Get balance from database
+		numeric nBalance = True
+		//Declaration variable
+		numeric nChoose
+		//Displaying balance
+		display "Your Balance is" nBalance
+		display "Do you want to continue?
+				 1. Yes
+				 2. No"
+		display "Insert by Inputting number"
+		accept nChoose
+		switch (nChoose)
+		case "1" : //If the input number is 1
+				call Main_Menu
+				break
+		case "2" : //If the input number is 2
+				display "You Will be Logged Out"
+				call Homepage
+				break
+		default : //If the input is not number 1 or number 2
+				display "Input is Wrong, Please Try Again"
+				call Balance_Check_Menu
+				break
+	end

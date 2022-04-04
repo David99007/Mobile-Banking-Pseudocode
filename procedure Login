@@ -1,0 +1,29 @@
+procedure Login
+	begin
+		//Menu Login
+		character cUserName, cPassword
+		display "You can Login by Inputting Your Data Down Below"
+		display "Input Your Username"
+		accept cUserName
+		display "Input Your Password"
+		accept cPassword
+		read source from database
+		//End of Menu Login
+			if (cUsername = "" OR cPassword = "")
+			//Username and Password need to be filled
+				begin
+					display "Username and Password Must be Filled"
+					call Login
+				end
+			else if (cUsername == False OR cPassword == False)
+			//Username and Password need to be the same that were saved to the database
+				begin
+					display "Username or Password is Wrong, Please Try Again"
+				end
+			else
+			//If all inputs are correct
+				begin
+					call Main_Menu
+				end
+			end if
+	end
